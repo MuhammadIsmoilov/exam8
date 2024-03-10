@@ -1,0 +1,57 @@
+1.Что означает API и какова его цель в разработке программного обеспечения? Приведите примеры ситуаций, когда API обычно используются при разработке программного обеспечения.
+api is aplication programming interface api in rangi most meboshad ma'lumothora az back girifta ba front mebarad va az front ba back va api baroi roi kardani zapros chixel meshavad istifoda burda meshavad
+
+
+2.Как работают REST API? Что содержит клиентский запрос RESTful API? Назовите наиболее часто используемые методы HTTP в архитектуре RESTful. Объясните цикл запрос-ответ в RESTful API.
+restapi (representional state transfer aplication programming interface) baroi roi kardani malumoti user ba digar user yoki server bo vositai payvast shudan ba internet meboshad
+RESTful url dorad ,method, va HTTP headers
+url in rangi adress meboshad va kayke mo zaprosmona ravon mekunem yakum mebiyoyad hami papkai url medaroyad dar url adressmon dar kujoay
+metodo boshad info : PUT,PATCH,DELETE,UPDATE,GET,POST meboshand
+HTTP in az header va footer iborat ast (HTML) HTTP i hdsh rangi zapros yakum ba HTTP meravad zaprosi mo va status kod qati proverkash mekna
+
+
+3.What does the RESTful API server response contain? Explain different status codes. Provide examples of specific status codes and their meanings.
+RESTful
+RESTful url dorad ,method, va HTTP headers
+url in rangi adress meboshad va kayke mo zaprosmona ravon mekunem yakum mebiyoyad hami papkai url medaroyad dar url adressmon dar kujoay
+metodo boshad info : PUT,PATCH,DELETE,UPDATE,GET,POST meboshand
+HTTP in az header va footer iborat ast (HTML) HTTP i hdsh rangi zapros yakum ba HTTP meravad zaprosi mo va status kod qati proverkash mekna
+status kodo az 1 yoki 100 sar meshavand :
+100 to 199 in hatogixoi informatsioni
+200 to 299 yagon hatogi nadorem
+300 to 399 sintaksis hatogi bafikram ukaa dayodm nest
+400 to 499 i yane hamai hatogihomon ay hamashda popularni in "404 - meboshad fa not found mebrorad"
+az 500 to 599 hatogii server
+
+4.Where is Django used in web development, and what are its main components?
+Django in framework meboshad va Djangora baroi python asosan sohtagi hastan dar Django bisyor bibliotekahoi ba darkori meboshad va kori moro teztar va fahmotar ijro mekunad
+Django baroi web-site soxtan meboshad 
+
+5.What are Django Models? Provide a brief example of a Django models for a school management system.
+Django model in vaqte ki mo dar vs code djangora install meknem va command menavisem ki activate shavan avtomatiki chandta papka mesozad 
+papkai models, settings, urls, va digarho  va model baroi baza danii mora kontrol kadan istifoda burda meshavad 
+mo postgreSQL isifoda mebarem a dar django avtomatiki sqlite sozdat mekna va ustod istifoda burdansha ukayam nameton holi praktika nakardam
+
+6.What are Django Views? Provide a brief example of a Django view for a school management system.
+yane guftem bo commandai django-admin startproject "mainproj ." - noimi papkamon in main papka meboshad va mo faqat hamira run meknem mo dar yak proekt yakta papka doshta metonem va 10 app yane aplication
+app qati kor mekunem va main qati run meknem baroi app soxtan -python manage.py startapp nomi file 
+va view in logikai barnomai mo meboshad mo dar view hamai funkciyahomona ravon ravon meknem dar django 2 namudi navistan hast yoki namedonm nomsh chi bd 
+class qati menavisem va funksiya qati 
+misol :
+from django.Views.generic import TemPlateViews
+clss About_Page(TemPlateViews):
+    variable = "about.html"
+
+7.What are Django URLs? Explain what they do. Provide a brief example of a Django URLs for a school management system.
+url in adress meboshad ki mo megem inami adres qati inmija bra misol:
+from django.urls import path,include
+
+urlpatterns[
+    path('admin', asmin.urls.site)
+    path('',views.include(""))
+]
+
+8.What are Django Templates? What is Extended Templates, and when are they used? Describe a scenario where extended templates are beneficial and provide an example.
+Django templates inho asosi html/css va js meboshad extend rosti gap ustod hondmsh nafahmidmsh neki sintaksissha medonm:
+{% extend %}
+extend i rangi da sass bdagi yakchira d bor istifoda namebarem extendsh meknem kopiya meshava
